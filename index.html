@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Biuro Rachunkowe Gdańsk</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#e8eef3;
+    font-family:'Montserrat',sans-serif;
+    color:#334155;
+}
+
+.container{
+    width:95%;
+    max-width:1400px;
+    margin:30px auto;
+    background:#ffffff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,0.10);
+}
+
+.banner img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+.content{
+    padding:45px;
+}
+
+.intro{
+    background:#eef9fb;
+    border-left:6px solid #1492d1;
+    padding:25px;
+    border-radius:8px;
+    line-height:1.9;
+    font-size:17px;
+}
+
+.section-title{
+    margin-top:45px;
+    margin-bottom:25px;
+    color:#1262b3;
+    font-size:28px;
+    font-weight:700;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:15px;
+}
+
+.service-box{
+    background:#fbfdff;
+    border:1px solid #d6e3ef;
+    border-radius:8px;
+    padding:20px;
+    line-height:1.7;
+}
+
+.benefits{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.benefit{
+    background:#fbfdff;
+    border-left:4px solid #1262b3;
+    padding:18px;
+    border-radius:6px;
+    line-height:1.8;
+}
+
+.benefit strong{
+    color:#0b3f78;
+}
+
+.contact-section{
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+.contact-text{
+    line-height:1.9;
+    color:#475569;
+}
+
+.contact-data{
+    margin-top:20px;
+    color:#1262b3;
+    font-size:18px;
+    font-weight:600;
+    line-height:2;
+}
+
+hr{
+    border:none;
+    border-top:1px solid #dbe5ef;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+
+    .container{
+        width:100%;
+        margin:0;
+        border-radius:0;
+    }
+
+    .content{
+        padding:20px;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:22px;
+    }
+
+    .intro{
+        font-size:16px;
+    }
+
+    .contact-data{
+        font-size:16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="banner">
+        <img src="baner.jpg" alt="Biuro Rachunkowe Gdańsk">
+    </div>
+
+    <div class="content">
+
+        <div class="intro">
+            Stawiamy na stały kontakt, jasne zasady współpracy dostosowane do Twojego biznesu oraz indywidualne podejście do każdego Przedsiębiorcy.
+        </div>
+
+        <h2 class="section-title">W czym możemy pomóc?</h2>
+
+        <div class="services">
+
+            <div class="service-box">
+                Rzetelne prowadzenie KPiR oraz Ryczałtu od przychodów ewidencjonowanych
+            </div>
+
+            <div class="service-box">
+                Rozliczanie VAT, PIT i ZUS
+            </div>
+
+            <div class="service-box">
+                Rozliczanie płac
+            </div>
+
+            <div class="service-box">
+                Doradztwo przy zakładaniu firmy i wyborze optymalnej formy opodatkowania
+            </div>
+
+        </div>
+
+        <h2 class="section-title">Zapewniamy</h2>
+
+        <div class="benefits">
+
+            <div class="benefit">
+                <strong>Pełne bezpieczeństwo i OC</strong><br>
+                Posiadamy ubezpieczenie odpowiedzialności cywilnej i działamy zgodnie z aktualnymi przepisami prawa podatkowego.
+            </div>
+
+            <div class="benefit">
+                <strong>Wygodę</strong><br>
+                Oferujemy w pełni bezpieczny elektroniczny obieg dokumentów bez konieczności wychodzenia z biura.
+            </div>
+
+            <div class="benefit">
+                <strong>Terminowość rozliczeń</strong>
+            </div>
+
+            <div class="benefit">
+                <strong>Brak ukrytych kosztów</strong>
+            </div>
+
+        </div>
+
+        <h2 class="section-title">Zapraszamy do kontaktu</h2>
+
+        <div class="contact-section">
+
+            <p class="contact-text">
+                Jeżeli szukasz rzetelnej obsługi księgowej dla swojej firmy, zapraszamy do kontaktu.
+                Chętnie odpowiemy na pytania i przedstawimy ofertę dopasowaną do potrzeb Twojego biznesu.
+            </p>
+
+            <p class="contact-data">
+		Fundacja Nasza Europa<br>
+		NIP 9571176091<br>
+                663 775 775<br>
+                office@naszaeuropa.org
+            </p>
+
+        </div>
+
+        <hr>
+
+    </div>
+
+</div>
+
+</body>
+</html>
