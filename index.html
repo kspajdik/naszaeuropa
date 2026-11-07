@@ -6,9 +6,19 @@
 
 <title>Biuro Rachunkowe Gdańsk</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+:root{
+    --blue:#1667c7;
+    --blue-dark:#0d4fa3;
+    --yellow:#e7b93f;
+
+    --text:#334155;
+    --light:#f4f6f8;
+    --border:#d9e2ec;
+}
 
 *{
     margin:0;
@@ -16,20 +26,25 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    background:#e8eef3;
+    background:var(--light);
     font-family:'Montserrat',sans-serif;
-    color:#334155;
+    color:var(--text);
+    line-height:1.7;
 }
 
 .container{
     width:95%;
-    max-width:1400px;
-    margin:30px auto;
+    max-width:1500px;
+    margin:20px auto;
     background:#ffffff;
     border-radius:12px;
     overflow:hidden;
-    box-shadow:0 15px 40px rgba(0,0,0,0.10);
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
 }
 
 .banner img{
@@ -38,82 +53,159 @@ body{
     display:block;
 }
 
-.content{
-    padding:45px;
+.color-bar{
+    height:5px;
+    background:var(--blue-dark);
 }
 
+.content{
+    padding:40px 50px 50px;
+}
+
+/* INTRO */
+
 .intro{
-    background:#eef9fb;
-    border-left:6px solid #1492d1;
-    padding:25px;
+    background:#fafcff;
+    border:1px solid var(--border);
+    border-left:4px solid var(--yellow);
     border-radius:8px;
-    line-height:1.9;
+    padding:35px;
     font-size:17px;
 }
 
+/* NAGŁÓWKI */
+
 .section-title{
-    margin-top:45px;
+    position:relative;
+    margin-top:50px;
     margin-bottom:25px;
-    color:#1262b3;
-    font-size:28px;
+    color:var(--blue-dark);
+    font-size:30px;
     font-weight:700;
+    padding-bottom:10px;
 }
+
+.section-title::after{
+    content:"";
+    width:60px;
+    height:3px;
+    background:var(--yellow);
+
+    position:absolute;
+    left:0;
+    bottom:0;
+}
+
+/* USŁUGI */
 
 .services{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:15px;
+    gap:18px;
 }
 
 .service-box{
-    background:#fbfdff;
-    border:1px solid #d6e3ef;
+    background:#fff;
+    border:1px solid var(--border);
+    border-top:4px solid var(--blue);
     border-radius:8px;
-    padding:20px;
-    line-height:1.7;
+    padding:24px;
+    transition:.25s ease;
 }
+
+.service-box:hover{
+    box-shadow:0 15px 35px rgba(22,103,199,.08);
+    border-top-color:var(--blue-dark);
+}
+
+/* BENEFITY */
 
 .benefits{
     display:flex;
     flex-direction:column;
-    gap:12px;
+    gap:16px;
 }
 
 .benefit{
-    background:#fbfdff;
-    border-left:4px solid #1262b3;
-    padding:18px;
-    border-radius:6px;
-    line-height:1.8;
+    background:#fff;
+    border:1px solid var(--border);
+    border-left:4px solid var(--blue);
+    border-radius:8px;
+    padding:22px;
 }
 
 .benefit strong{
-    color:#0b3f78;
+    display:block;
+    margin-bottom:6px;
+    color:var(--blue-dark);
 }
 
+/* KONTAKT */
+
 .contact-section{
-    margin-top:10px;
-    margin-bottom:20px;
+    background:
+    linear-gradient(
+        135deg,
+        rgba(231,185,63,.05),
+        rgba(22,103,199,.03)
+    );
+
+    border:1px solid var(--border);
+    border-left:4px solid var(--blue-dark);
+    border-radius:8px;
+    padding:35px;
 }
 
 .contact-text{
-    line-height:1.9;
-    color:#475569;
+    color:var(--text);
 }
 
 .contact-data{
-    margin-top:20px;
-    color:#1262b3;
+    margin-top:25px;
+    padding-top:20px;
+    border-top:1px solid var(--border);
+
+    color:var(--blue-dark);
     font-size:18px;
     font-weight:600;
     line-height:2;
 }
 
-hr{
-    border:none;
-    border-top:1px solid #dbe5ef;
-    margin-top:40px;
+.contact-data::before{
+    content:"";
+    display:block;
+    width:50px;
+    height:3px;
+    background:var(--yellow);
+    margin-bottom:15px;
 }
+
+/* STOPKA */
+
+.footer{
+    text-align:center;
+    padding-top:35px;
+    margin-top:35px;
+    border-top:1px solid var(--border);
+    color:#64748b;
+    font-size:14px;
+}
+
+/* TABLETY */
+
+@media(max-width:1024px){
+
+    .content{
+        padding:35px;
+    }
+
+    .services{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* TELEFONY */
 
 @media(max-width:768px){
 
@@ -123,20 +215,26 @@ hr{
         border-radius:0;
     }
 
+    .banner img{
+        width:100%;
+        height:auto;
+    }
+
     .content{
-        padding:20px;
+        padding:25px;
     }
 
     .services{
         grid-template-columns:1fr;
     }
 
-    .section-title{
-        font-size:22px;
+    .intro{
+        padding:25px;
+        font-size:15px;
     }
 
-    .intro{
-        font-size:16px;
+    .section-title{
+        font-size:24px;
     }
 
     .contact-data{
@@ -145,8 +243,29 @@ hr{
 
 }
 
-</style>
+/* DUŻE MONITORY */
 
+@media(min-width:1600px){
+
+    .container{
+        max-width:1600px;
+    }
+
+    .content{
+        padding:60px 80px;
+    }
+
+    .section-title{
+        font-size:34px;
+    }
+
+    .intro{
+        font-size:18px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
@@ -157,10 +276,14 @@ hr{
         <img src="baner.jpg" alt="Biuro Rachunkowe Gdańsk">
     </div>
 
+    <div class="color-bar"></div>
+
     <div class="content">
 
         <div class="intro">
-            Stawiamy na stały kontakt, jasne zasady współpracy dostosowane do Twojego biznesu oraz indywidualne podejście do każdego Przedsiębiorcy.
+            Oferujemy kompleksową obsługę księgową dla przedsiębiorców, zapewniając bezpieczeństwo, terminowość oraz indywidualne podejście do potrzeb każdej firmy.
+            <br><br>
+            Stawiamy na stały kontakt i przejrzyste zasady współpracy. Wspieramy naszych Klientów w codziennych obowiązkach związanych z księgowością, podatkami i rozliczeniami, pozwalając im skupić się na rozwoju własnego biznesu. Dzięki nowoczesnemu elektronicznemu obiegowi dokumentów obsługujemy firmy z Trójmiasta oraz z całej Polski.
         </div>
 
         <h2 class="section-title">W czym możemy pomóc?</h2>
@@ -168,19 +291,19 @@ hr{
         <div class="services">
 
             <div class="service-box">
-                Rzetelne prowadzenie KPiR oraz Ryczałtu od przychodów ewidencjonowanych
+                Rzetelne prowadzenie KPiR oraz Ryczałtu od przychodów ewidencjonowanych.
             </div>
 
             <div class="service-box">
-                Rozliczanie VAT, PIT i ZUS
+                Rozliczanie podatków VAT, PIT oraz składek ZUS.
             </div>
 
             <div class="service-box">
-                Rozliczanie płac
+                Obsługa wynagrodzeń oraz rozliczanie płac.
             </div>
 
             <div class="service-box">
-                Doradztwo przy zakładaniu firmy i wyborze optymalnej formy opodatkowania
+                Doradztwo przy zakładaniu działalności gospodarczej oraz wybór optymalnej formy opodatkowania.
             </div>
 
         </div>
@@ -190,44 +313,48 @@ hr{
         <div class="benefits">
 
             <div class="benefit">
-                <strong>Pełne bezpieczeństwo i OC</strong><br>
-                Posiadamy ubezpieczenie odpowiedzialności cywilnej i działamy zgodnie z aktualnymi przepisami prawa podatkowego.
+                <strong>Pełne bezpieczeństwo i OC</strong>
+                Posiadamy ubezpieczenie odpowiedzialności cywilnej i działamy zgodnie z obowiązującymi przepisami prawa podatkowego.
             </div>
 
             <div class="benefit">
-                <strong>Wygodę</strong><br>
-                Oferujemy w pełni bezpieczny elektroniczny obieg dokumentów bez konieczności wychodzenia z biura.
+                <strong>Elektroniczny obieg dokumentów</strong>
+                Oferujemy wygodną i bezpieczną wymianę dokumentów bez konieczności osobistych wizyt.
             </div>
 
             <div class="benefit">
                 <strong>Terminowość rozliczeń</strong>
+                Dbamy o prawidłowe i terminowe składanie deklaracji oraz dokumentów wymaganych przez urzędy.
             </div>
 
             <div class="benefit">
-                <strong>Brak ukrytych kosztów</strong>
+                <strong>Przejrzyste warunki współpracy</strong>
+                Jasne zasady współpracy oraz brak ukrytych kosztów.
             </div>
 
         </div>
 
-        <h2 class="section-title">Zapraszamy do kontaktu</h2>
+        <h2 class="section-title">Kontakt</h2>
 
         <div class="contact-section">
 
             <p class="contact-text">
-                Jeżeli szukasz rzetelnej obsługi księgowej dla swojej firmy, zapraszamy do kontaktu.
-                Chętnie odpowiemy na pytania i przedstawimy ofertę dopasowaną do potrzeb Twojego biznesu.
+                Jeżeli szukasz rzetelnej obsługi księgowej dla swojej firmy, zapraszamy do kontaktu. Chętnie odpowiemy na pytania i przedstawimy ofertę dopasowaną do potrzeb Twojego biznesu.
             </p>
 
-            <p class="contact-data">
-		Fundacja Nasza Europa<br>
-		NIP 9571176091<br>
-                663 775 775<br>
-                office@naszaeuropa.org
-            </p>
+            <div class="contact-data">
+                Fundacja Nasza Europa<br>
+                NIP 9571176091<br>
+                Telefon 663 775 775<br>
+                E-mail: office@naszaeuropa.org<br>
+				Adres: ul. Potokowa 26, 80-283 Gdańsk
+            </div>
 
         </div>
 
-        <hr>
+        <div class="footer">
+            © Fundacja Nasza Europa | Biuro Rachunkowe Gdańsk
+        </div>
 
     </div>
 
