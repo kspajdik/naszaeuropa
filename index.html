@@ -11,23 +11,19 @@
 <style>
 
 :root{
-    --blue:#1667c7;
-    --blue-dark:#0d4fa3;
-    --yellow:#e7b93f;
+    --blue:#1558c6;
+    --blue-dark:#082b7f;
+    --yellow:#d7b14a;
 
     --text:#334155;
-    --light:#f4f6f8;
-    --border:#d9e2ec;
+    --light:#eef2f6;
+    --border:#dde4ec;
 }
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
 }
 
 body{
@@ -41,10 +37,10 @@ body{
     width:95%;
     max-width:1500px;
     margin:20px auto;
-    background:#ffffff;
+    background:#fff;
     border-radius:12px;
     overflow:hidden;
-    box-shadow:0 10px 35px rgba(0,0,0,.08);
+    box-shadow:0 20px 50px rgba(8,43,127,.08);
 }
 
 .banner img{
@@ -54,18 +50,43 @@ body{
 }
 
 .content{
-    padding:40px 50px 50px;
+    padding:30px 50px 50px;
 }
 
 /* INTRO */
 
 .intro{
-    background:#fafcff;
-    border:1px solid var(--border);
-    border-left:4px solid var(--yellow);
-    border-radius:8px;
-    padding:35px;
-    font-size:17px;
+    padding:0;
+}
+
+.intro h1{
+    color:var(--blue-dark);
+    font-size:42px;
+    font-weight:700;
+    line-height:1.2;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.intro-subtitle{
+    text-align:center;
+    color:#64748b;
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.intro-subtitle::after{
+    content:"";
+    display:block;
+    width:100px;
+    height:4px;
+    background:var(--yellow);
+    border-radius:20px;
+    margin:18px auto 0;
+}
+
+.intro p{
+    margin-bottom:15px;
 }
 
 /* NAGŁÓWKI */
@@ -109,8 +130,8 @@ body{
 }
 
 .service-box:hover{
-    box-shadow:0 15px 35px rgba(22,103,199,.08);
-    border-top-color:var(--blue-dark);
+    transform:translateY(-2px);
+    box-shadow:0 15px 35px rgba(21,88,198,.08);
 }
 
 /* BENEFITY */
@@ -138,13 +159,7 @@ body{
 /* KONTAKT */
 
 .contact-section{
-    background:
-    linear-gradient(
-        135deg,
-        rgba(231,185,63,.05),
-        rgba(22,103,199,.03)
-    );
-
+    background:#fafcff;
     border:1px solid var(--border);
     border-left:4px solid var(--blue-dark);
     border-radius:8px;
@@ -218,9 +233,12 @@ body{
         grid-template-columns:1fr;
     }
 
-    .intro{
-        padding:25px;
-        font-size:15px;
+    .intro h1{
+        font-size:28px;
+    }
+
+    .intro-subtitle{
+        font-size:16px;
     }
 
     .section-title{
@@ -245,12 +263,12 @@ body{
         padding:60px 80px;
     }
 
-    .section-title{
-        font-size:34px;
+    .intro h1{
+        font-size:46px;
     }
 
-    .intro{
-        font-size:18px;
+    .section-title{
+        font-size:34px;
     }
 
 }
@@ -270,7 +288,18 @@ body{
 
         <div class="intro">
 
-            Stawiamy na stały kontakt i przejrzyste zasady współpracy. Wspieramy naszych Klientów w codziennych obowiązkach związanych z księgowością, podatkami i rozliczeniami. Dzięki nowoczesnemu elektronicznemu obiegowi dokumentów obsługujemy firmy z Trójmiasta oraz z całej Polski.
+            <h1>
+                Księgowość, podatki i płace dla przedsiębiorców
+            </h1>
+
+            <p class="intro-subtitle">
+                z Trójmiasta oraz z całej Polski
+            </p>
+
+            <p>
+              Stawiamy na stały kontakt, jasne zasady współpracy dostosowane do Twojego biznesu i indywidualne podejście do każdego Przedsiębiorcy.
+
+            </p>
 
         </div>
 
@@ -330,17 +359,16 @@ body{
                 Jeżeli szukasz rzetelnej obsługi księgowej dla swojej firmy, zapraszamy do kontaktu. Chętnie odpowiemy na pytania i przedstawimy ofertę dopasowaną do potrzeb Twojego biznesu.
             </p>
 
-          
-            <div class="contact-data">
+      <div class="contact-data">
                 Fundacja Nasza Europa<br>
-                NIP: 9571176091<br>
+                NIP 9571176091<br><br>
                 Telefon: 663 775 775<br>
                 E-mail: office@naszaeuropa.org<br>
 		Adres: ul. Potokowa 26, 80-283 Gdańsk
             </div>
 
-        </div>
 
+        </div>
 
         <div class="footer">
             © Fundacja Nasza Europa | Biuro Rachunkowe Gdańsk
